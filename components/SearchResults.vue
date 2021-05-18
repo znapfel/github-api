@@ -46,9 +46,8 @@ export default {
   async fetch() {
     const headers = {
       // eslint-disable-next-line prettier/prettier
-      Authorization: `${process.env.GITHUB_TOKEN}`,
+      Authorization: `${this.$config.githubToken}`,
     }
-
     const defaultPostsPerPage = this.perPage
     const page = this.currentPage
     this.searchResults = await fetch(

@@ -56,8 +56,9 @@ export default {
   async fetch() {
     const headers = {
       // eslint-disable-next-line prettier/prettier
-      Authorization: `${process.env.GITHUB_TOKEN}`,
+      Authorization: `${this.$config.githubToken}`,
     }
+
     this.userData = await fetch(
       `https://api.github.com/users/${this.user.login}`,
       {
