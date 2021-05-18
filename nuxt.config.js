@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
@@ -29,8 +31,12 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    ['@nuxtjs/dotenv', { path: './' }],
+    ['@nuxtjs/dotenv'],
   ],
+
+  env: {
+    GITHUB_TOKEN: process.env.GITHUB_TOKEN,
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
