@@ -1,7 +1,6 @@
 <template>
   <div class="search--home">
     <div>
-      <h1>User Search</h1>
       <SearchBar />
     </div>
   </div>
@@ -11,7 +10,7 @@
 export default {}
 </script>
 
-<style>
+<style scoped>
 .search--home {
   height: 100vh;
   display: flex;

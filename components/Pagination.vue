@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pagination">
     <a :href="previousUrl" :aria-disabled="page <= 1">Previous</a>
     <a :href="nextUrl" :aria-disabled="page >= pageCount">Next</a>
   </div>
@@ -35,8 +35,17 @@ export default {
 </script>
 
 <style>
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.pagination a {
+  padding: 1rem;
+}
 a[aria-disabled='true'] {
-  color: grey;
+  color: var(--accent-color);
   pointer-events: none;
+  text-decoration: none;
 }
 </style>
