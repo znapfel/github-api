@@ -58,7 +58,6 @@ export default {
       // eslint-disable-next-line prettier/prettier
       Authorization: `${this.$config.githubToken}`,
     }
-    console.log({ headers })
 
     this.userData = await fetch(
       `https://api.github.com/users/${this.user.login}`,
@@ -66,7 +65,6 @@ export default {
         headers,
       }
     ).then((res) => res.json())
-    console.log({ data: this.userData })
 
     this.loaded = true
   },
